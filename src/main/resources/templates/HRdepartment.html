@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developers page</title>
+    <!-- Add Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add custom CSS -->
+    <style>
+        header {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+footer {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: auto;
+}
+
+#icon a {
+    color: #2c3e50;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+#icon a:hover {
+    color: #bcc1c4;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .jumbotron {
+            background-color: #1c4b77;
+            color: #fff;
+            padding: 2rem 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www.planotechgroupofcompanies.com/wp-content/uploads/2023/11/Picture1-removebg-preview.png" alt="Logo">
+        </div>
+        <nav>
+            <a href="/about-us">About Us</a>
+            <a href="/signup">Signup</a>
+            <a href="/logout">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Your main content goes here -->
+
+    <!-- Include the footer -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Developer's Page</a>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+        <div class="container">
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <h1>Welcome, HR!</h1>
+                </div>
+            </div>
+            <p class="lead"></p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <form action="/profile">
+  	<button name="department" value="HR">profile</button>
+	</form>
+
+    <!-- Add Bootstrap JS and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    
+    
+    <footer>
+        <div id="icon">
+
+            <h5>Follow-us</h5>
+            <a href="https://www.facebook.com/planotechevents" target="_blank"><i
+                    class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/planotechevents11/?hl=en" target="_blank"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/darshan-kumar-k/" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="https://twitter.com/PlanotechEvents" target="_blank"><i
+                    class="fa-brands fa-twitter"></i></a>
+        </div>
+        <p class="p11">© Copyright 2022 Planotech Group</p>
+        <p class="p1">Contact Information:</p>
+        <p class="p2">
+            <i class="fa-regular fa-envelope"></i>
+            planotech@gmail.com |
+            <i class="fa-solid fa-phone"></i>
+            +91 9876543210
+        </p>
+    </footer>
+
+</body>
+</html>

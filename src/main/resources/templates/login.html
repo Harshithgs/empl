@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #ecf0f1; /* Lightened color */
+            color: #2c3e50;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 300px;
+            height: 80px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .spacer {
+            flex-grow: 1;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2em;
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        footer {
+            background-color: #ecf0f1; /* Lightened color */
+            color: #2c3e50;
+            text-align: center;
+            padding: 10px;
+        }
+
+        img {
+            width: 60%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #3f454a;
+        }
+
+        #abc {
+            width: 75px;
+            height: auto;
+            display: block;
+            margin: 1px auto;
+        }
+
+        #d {
+            width: 60%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+
+        #icon a {
+            color: #2c3e50;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        #icon a:hover {
+            color: #3498db;
+        }
+
+        /* Styles specific to the form */
+        form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        fieldset {
+            border: 1px solid #3498db; /* Adjusted border color */
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #3498db; /* Adjusted color */
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold; /* Make text bold */
+            color: #3498db; /* Adjusted color */
+        }
+
+        button[type="reset"] {
+            margin-left: 10px;
+        }
+
+        input {
+            font-weight: bold; /* Make input text bold */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www.planotechgroupofcompanies.com/wp-content/uploads/2023/11/Picture1-removebg-preview.png" alt="Logo">
+        </div>
+        <nav>
+            <a href="/"><button>Home</button></a>
+            <a href="/about-us"><button>About Us</button></a>
+            <a href="/signup"><button>Signup</button></a>
+            <a href="/login"><button>Login</button></a>
+        </nav>
+    </header>
+
+    <div>
+        <h2 th:text="${fail}"></h2>
+        <h2 th:text="${pass}"></h2>
+      <center>  <h1>Login</h1></center>
+        <form action="/employee/login" method="post">
+            <fieldset>
+                <legend>Login here,</legend>
+                <table>
+                    <tr>
+                        <th>Email / Mobile: </th>
+                        <th><input type="text" name="emph"></th>
+                    </tr>
+                    <tr>
+                        <th>Password: </th>
+                        <th><input type="password" name="password"></th>
+                    </tr>
+                    <tr>
+                        <th><button>Login</button></th>
+                        <th><button type="reset">Cancel</button></th>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+        <a href="/"><button>Back</button></a>
+    </div>
+
+    <footer>
+        <div id="icon">
+
+            <h5>Follow-us</h5>
+            <a href="https://www.facebook.com/planotechevents" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/planotechevents11/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/darshan-kumar-k/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://twitter.com/PlanotechEvents" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <p class="p11">© Copyright 2022 Planotech Group</p>
+        <p class="p1">Contact Information:</p>
+        <p class="p2">
+            <i class="fa-regular fa-envelope"></i>
+            planotech@gmail.com |
+            <i class="fa-solid fa-phone"></i>
+            +91 9876543210
+        </p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/22e204274b.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

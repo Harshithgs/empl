@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo img {
+            width: 200px;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .registration-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .registration-form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(9, 9, 9, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 1000px;
+            margin-top: 20px;
+        }
+
+        .registration-form h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+
+        .gender-form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .gender-form label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .gender-form input {
+            margin-right: 5px;
+        }
+
+        .gender-form input,
+        .gender-form label {
+            display: inline-block;
+        }
+
+        .gender-form button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .fail {
+            color: red;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        #icon a {
+            color: #2c3e50;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        #icon a:hover {
+            color: #3498db;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www.planotechgroupofcompanies.com/wp-content/uploads/2023/11/Picture1-removebg-preview.png"
+                alt="Logo">
+        </div>
+        <nav>
+            <a href="/"><button>Home</button></a>
+            <a href="/about-us"><button>About Us</button></a>
+            <a href="/login"><button>Login</button></a>
+        </nav>
+    </header>
+
+    <h1 class="fail" th:text="${fail}"></h1>
+
+    <div class="registration-container">
+        <div class="registration-form">
+            <h2> Sign-up </h2>
+            <form action="/employee/signup" method="post" id="form">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Conform password:</label>
+                    <input type="password" id="password" name="conpassword" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Phone:</label>
+                    <input type="password" id="password" name="phone" required>
+                </div>
+
+                <div class="gender-form">
+                    <label for="male">Gender <br> <br>
+                        <input type="radio" id="male" name="gender" value="male"> Male
+                    </label>
+                    <label for="female">
+                        <input type="radio" id="female" name="gender" value="female"> Female
+                    </label>
+                    <label for="other">
+                        <input type="radio" id="other" name="gender" value="other"> Other
+                    </label>
+                </div>
+                
+               <div>
+                      <label for="select">Depertment:</label><br>
+                      <select id="select" name="deptarment">
+                         <option name="deptarment" value=""></option>
+                         <option name="deptarment" value="HR">HR</option>
+                         <option name="deptarment" value="Accounts">Accounts</option>
+                         <option name="deptarment" value="Design">Design</option>
+                         <option name="deptarment" value="IT">IT</option>
+                         <option name="deptarment" value="Marketing">Marketing</option>
+                         <option name="deptarment" value="Production">Production</option>
+                         <option name="deptarment" value="ClientServicing">Client Servicing</option>
+                      </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">DOB</label>
+                    <input type="date" id="password" name="dob" required>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div id="icon">
+
+            <h5>Follow-us</h5>
+            <a href="https://www.facebook.com/planotechevents" target="_blank"><i
+                    class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/planotechevents11/?hl=en" target="_blank"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/darshan-kumar-k/" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="https://twitter.com/PlanotechEvents" target="_blank"><i
+                    class="fa-brands fa-twitter"></i></a>
+        </div>
+        <p class="p11">© Copyright 2022 Planotech Group</p>
+        <p class="p1">Contact Information:</p>
+        <p class="p2">
+            <i class="fa-regular fa-envelope"></i>
+            planotech@gmail.com |
+            <i class="fa-solid fa-phone"></i>
+            +91 9876543210
+        </p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/22e204274b.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
