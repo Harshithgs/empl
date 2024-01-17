@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>devloper</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            background-image: url("https://itsm.tools/wp-content/uploads/2020/07/successful-employees.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            /* padding: 20px; */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo img {
+            width: 300px;
+            height: 80px;
+        }
+
+        .navigation {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .navigation button {
+            width: auto;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        .navigation h4 {
+            margin: 0;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            color: #2c3e50;
+        }
+
+        .spacer {
+            flex-grow: 1;
+        }
+
+        .navigation h4:hover {
+            color: #3498db;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            background-image: url("https://w0.peakpx.com/wallpaper/617/788/HD-wallpaper-anonymous-suite-employee-hacker-unknown.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .content h2 {
+            margin: 0;
+            margin-bottom: 20px;
+            color: antiquewhite;
+        }
+
+        .content p {
+            margin: 0;
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #f1e9e9; /* Adjust text color for better visibility */
+        }
+
+        .content img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        #icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        #icon a {
+            color: #2c3e50;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        #icon a:hover {
+            color: #3498db;
+        }
+
+        button {
+            width: 10%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        img {
+            width: 35%;
+            height: 55%;
+        }
+
+        #pop {
+            width: 35%;
+            height: 55%;
+            position: absolute;
+            top: 50%;
+            right: 5%;
+        }
+
+        #logoutBtn {
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #logoutBtn:hover {
+            background-color: #2980b9;
+        }
+        a button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px; /* Add space between buttons */
+}
+
+/* Change color on hover */
+a button:hover {
+    background-color: #45a049;
+}
+
+/* Position buttons to the right corner */
+.navigation {
+    margin-left: auto;
+}
+#output-table {
+    color: white;
+    margin-left: 45%;
+}
+#nav {
+    margin-left: 60%;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www.planotechgroupofcompanies.com/wp-content/uploads/2023/11/Picture1-removebg-preview.png"
+                alt="Logo">
+        </div>
+        <nav class="navigation" id="nav">
+            <h4><button>Profile</button></h4>
+            <h4><button id="logoutBtn">Logout</button></h4>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="header">
+            <center>
+                <h1>Welcome ClientServicing team</h1>
+            </center>
+        </div>
+        <div class="content">
+            <center> <h2>Welcome, Name</h2></center>
+            <h2>Number of leaves: 5</h1>
+                <h2>Today's score: 80</h1>
+                    <p>As an employee make sure you <br> ➣Make Continuous Learning a Priority <br> ➣Enhance Effective
+                        Communication <br> ➣ Master the Art of Time Management <br> ➣ Cultivate Adaptability <br> ➣Foster
+                        Team Collaboration <br> ➣Develop Leadership Skills <br> ➣Build Strong Professional Networks <br> ➣Sharpen
+                        Your Tech Skills <br>
+                    
+
+                    <h1>.</h1>
+                    <p id="datetime"></p>
+                    <button onclick="showTable()">Show Table</button>
+
+<!-- Table container -->
+<div id="table-container">
+    <table id="output-table" style="border: 5px solid white;" border="5px" cellpadding="5px" cellspacing="5px">
+        <thead>
+            <tr>
+                <th>In</th>
+                <th>Out</th>
+                <th>Salary</th>
+                <th>Overall Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add your table data here -->
+            <tr>
+                <td>Value1</td>
+                <td>Value2</td>
+                <td>Value3</td>
+                <td>Value4</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function showTable() {
+        // Get the table container element
+        var tableContainer = document.getElementById("table-container");
+
+        // Toggle the display style to show/hide the table
+        if (tableContainer.style.display === "none") {
+            tableContainer.style.display = "block";
+        } else {
+            tableContainer.style.display = "none";
+        }
+    }
+</script>
+
+                    <script>
+                        function updateDateTime() {
+                            // Get current date and time
+                            var currentDate = new Date();
+
+                            // Format the date and time
+                            var options = {
+                                weekday: 'long',
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric',
+                                hour: 'numeric',
+                                minute: 'numeric',
+                                second: 'numeric',
+                                timeZoneName: 'short'
+                            };
+                            var formattedDateTime = currentDate.toLocaleDateString('en-US', options);
+
+                            // Display the formatted date and time
+                            document.getElementById('datetime').innerHTML = formattedDateTime;
+                        }
+
+                        // Call the function initially
+                        updateDateTime();
+
+                        // Update date and time every second
+                        setInterval(updateDateTime, 1000);
+                    </script>
+
+                    <a href="#" class="button">Click here to submit today's report</a>
+        </div>
+    </div>
+    <footer>
+        <div id="icon">
+            <h5>Follow Us:</h5>
+            <a href="https://www.facebook.com/planotechevents" target="_blank"><i
+                    class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/planotechevents11/?hl=en" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/darshan-kumar-k/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/PlanotechEvents" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="p1">© Copyright 2022 Planotech Group</p>
+        <p class="p2">
+            <i class="far fa-envelope"></i> planotech@gmail.com |
+            <i class="fas fa-phone"></i> +91 9876543210
+        </p>
+    </footer>
+    <script src="https://kit.fontawesome.com/22e204274b.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

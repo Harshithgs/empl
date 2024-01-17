@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+    <style>
+         body {
+               font-family: 'Helvetica', Arial, sans-serif;
+               margin: 0;
+               padding: 0;
+               background-color: #f4f4f4;
+               color: #333;
+           }
+   
+           header {
+               background-color: #ecf0f1; /* Lightened color */
+               color: #2c3e50;
+               padding: 20px;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+           }
+   
+           .logo img {
+               width: 300px;
+               height: 80px;
+           }
+   
+          nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+   
+           section {
+               margin: 20px;
+               padding: 20px;
+               background-color: #fff;
+               border-radius: 8px;
+               box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+           }
+   
+           h1 {
+               color: #2c3e50;
+               font-size: 2em;
+           }
+   
+           h2 {
+               color: #3498db;
+           }
+   
+           footer {
+               background-color: #ecf0f1; /* Lightened color */
+               color: #2c3e50;
+               text-align: center;
+               padding: 10px;
+           }
+   
+           img {
+       width: 60%; /* Set the width to 60% */
+       height: auto; /* Maintain aspect ratio while adjusting width */
+       display: block; /* Remove default inline behavior */
+       margin: 10px auto; /* Center the images horizontally with some top and bottom margin */
+   }
+   p {
+       font-size: 1.2em; /* Increase font size for paragraphs */
+       color: #3f454a;
+   }
+   #abc{
+       width: 75px; /* Set the width to 60% */
+       height: auto; 
+       display: block; /* Remove default inline behavior */
+       margin: 1px auto; 
+   }
+   #d{
+    width: 60%; /* Set the width to 60% */
+    height: auto; /* Maintain aspect ratio while adjusting width */
+    display: block; /* Remove default inline behavior */
+    margin: 10px auto;
+   }
+   #icon a {
+            color: #2c3e50; /* Set the color for the social media icons */
+            text-decoration: none;
+            margin-right: 10px; /* Adjust spacing between icons */
+        }
+
+        #icon a:hover {
+            color: #3498db; /* Change color on hover */
+        }    
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                var h2Elements = document.querySelectorAll('h2, h3');
+                h2Elements.forEach(function (element) {
+                    element.style.display = 'none';
+                });
+            }, 1000);
+        });
+    </script>
+</head>
+
+<body>
+	
+	 <header>
+        <div class="logo">
+            <img src="https://www.planotechgroupofcompanies.com/wp-content/uploads/2023/11/Picture1-removebg-preview.png" alt="Logo">
+        </div>
+    <nav>
+        <a href="/about-us"><button>About Us</button></a>
+        <a href="/signup"><button>Signup</button></a>
+        <a href="/login"><button>Login</button></a>
+    </nav>
+	 </header>
+	 
+	 <section>
+		 <marquee><H1>WELCOME TO PLANOTECH</H1></marquee>
+		 <img src="https://www.planotechevents.com/wp-content/uploads/2022/01/pl50-768x496.jpg">
+		 <P>At Planotech Events & Marketing (OPC) Pvt Ltd, we offer you a robust platform to foster the growth of your company.
+
+Whether you’re planning a product launch, conference, holiday party, or a unique and tailored activity, our organization possesses the expertise to transform your ideas into reality.
+
+Planotech handles everything from initial design and planning to executing on-site and bringing your original concept to life.
+
+We understand the investment that corporate events entail; thus, we approach each project with sensitivity and consideration for your brand. Our aim is to consistently achieve your objectives and leave the most significant possible impact on your audience.</P>
+	 </section>
+
+    <h2 th:text="${pass}">This is an h2 element</h2>
+    <h3 th:text="${fail}">This is an h3 element</h3>
+        <footer>
+        <div id="icon">
+            
+            <h5>Follow-us</h5>
+            <a href="https://www.facebook.com/planotechevents" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/planotechevents11/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/darshan-kumar-k/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://twitter.com/PlanotechEvents" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <p class="p11">© Copyright 2022 Planotech Group</p>
+        <p class="p1">Contact Information:</p>
+        <p class="p2">
+            <i class="fa-regular fa-envelope"></i>
+            planotech@gmail.com |
+            <i class="fa-solid fa-phone"></i>
+            +91 9876543210
+        </p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/22e204274b.js" crossorigin="anonymous"></script>
+   
+</body>
+
+</html>

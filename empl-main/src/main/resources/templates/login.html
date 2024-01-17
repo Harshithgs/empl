@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        /* Styles for the page layout */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column; /* Updated for vertical alignment */
+        }
+
+        /* Styles for the login container */
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        /* Styles for input fields and buttons */
+        input {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        button,
+        nav button {
+            background-color: #2add5f;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button.cancel {
+            background-color: #2add5f;
+        }
+
+        header {
+            background-color: #ecf0f1;
+            color: #52e725;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo img {
+            width: 300px;
+            height: 80px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav button {
+            background-color: #2add5f;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        nav button:hover {
+            background-color: #ecf0f1;
+        }
+
+        .spacer {
+            flex-grow: 1;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px; /* Increased max-width for better alignment */
+            text-align: center;
+        }
+
+        footer {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            font-size: 18px;
+            margin-top: 20px; /* Added margin to separate from the section */
+        }
+
+        #icon a {
+            color: #2c3e50;
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 28px;
+        }
+
+        #icon a:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://www.planotechgroupofcompanies.com/wp-content/uploads/2023/11/Picture1-removebg-preview.png" alt="Logo">
+        </div>
+        <nav>
+            <a href="/"><button>Home</button></a>
+            <a href="/about-us"><button>About Us</button></a>
+            <a href="/signup"><button>Signup</button></a>
+        </nav>
+    </header>
+
+    <section class="login-container">
+        <h2>Login</h2>
+        <!-- Login Form -->
+        <form id="loginForm" action="/employee/login" method="post" onsubmit="return validateForm()">
+            <input type="text" id="emailPhone" placeholder="Email/Phone" required name="emph">
+            <input type="password" id="password" placeholder="Password" required name="password">
+            <button type="submit">Submit</button>
+            <button type="button" class="cancel" onclick="cancelLogin()">Cancel</button>
+        </form>
+    </section>
+
+    <!-- JavaScript for form validation and canceling login -->
+    <script>
+        function validateForm() {
+            var emailPhone = document.getElementById('emailPhone').value;
+            var password = document.getElementById('password').value;
+
+            if (emailPhone.trim() === '' || password.trim() === '') {
+                alert('Please fill out all fields');
+                return false;
+            }
+
+            // Additional validation logic can be added here if needed
+
+            return true;
+        }
+
+        function cancelLogin() {
+            document.getElementById("loginForm").reset();
+        }
+    </script>
+
+    <footer>
+        <div id="icon">
+            <h5>Follow Us:</h5>
+            <a href="https://www.facebook.com/planotechevents" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/planotechevents11/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/darshan-kumar-k/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/PlanotechEvents" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="p1">© Copyright 2022 Planotech Group</p>
+        <p class="p2">
+            <i class="far fa-envelope"></i> planotech@gmail.com |
+            <i class="fas fa-phone"></i> +91 9876543210
+        </p>
+    </footer>
+    <script src="https://kit.fontawesome.com/22e204274b.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

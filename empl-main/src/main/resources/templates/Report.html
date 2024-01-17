@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input {
+            padding: 8px;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+        header {
+               background-color: #ecf0f1; /* Lightened color */
+               color: #2c3e50;
+               padding: 20px;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+           }
+   
+           .logo img {
+               width: 300px;
+               height: 80px;
+           }
+   
+           .navigation {
+               display: flex;
+               gap: 20px;
+           }
+   
+           .navigation h4 {
+               margin: 0;
+               cursor: pointer;
+               transition: color 0.3s ease;
+               color: #2c3e50;
+           }
+           .spacer {
+               flex-grow: 1;
+           }
+           
+   
+           .navigation h4:hover {
+               color: #3498db; /* Change color on hover */
+           }
+           #icon a {
+            color: #2c3e50; /* Set the color for the social media icons */
+            text-decoration: none;
+            margin-right: 10px; /* Adjust spacing between icons */
+        }
+
+        #icon a:hover {
+            color: #3498db; /* Change color on hover */
+        }
+        footer {
+               background-color: #ecf0f1; /* Lightened color */
+               color: #2c3e50;
+               text-align: center;
+               padding: 10px;
+           }
+           section {
+               margin: 20px;
+               padding: 20px;
+               background-color: #fff;
+               border-radius: 8px;
+               box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+           }
+   
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://www.planotechgroupofcompanies.com/wp-content/uploads/2023/11/Picture1-removebg-preview.png"
+                alt="Logo">
+        </div>
+        <nav class="navigation" id="nav">
+            <h4><button>Home</button></h4>
+            <h4><button id="logoutBtn">Logout</button></h4>
+            </nav>
+    </header>
+
+    <section>
+        <center><h1>Report Page</h1></center>
+        <p>Username: <span th:text="${employee.username}"></span></p>
+
+        <p>Current Report: <span th:text="${employee.report}"></span></p>
+    <label for="dailyScore">Give Score</label>
+    <input type="number" id="dailyScore" name="dailyScore" min="0" max="10" required><br>
+    <button >Submit</button>
+
+    <script>
+        function submitScore() {
+            var scoreInput = document.getElementById('dailyScore');
+            var score = scoreInput.value;
+
+            if (score <= 10) {
+                // Handle submission logic here (e.g., send data to server)
+                alert('Score submitted successfully!');
+            } else {
+                alert('Please enter a score between 0 and 10.');
+            }
+        }
+        
+    </script>
+    </section>
+    <footer>
+        <div id="icon">
+            <h5>Follow Us:</h5>
+            <a href="https://www.facebook.com/planotechevents" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/planotechevents11/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/darshan-kumar-k/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/PlanotechEvents" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="p1">© Copyright 2022 Planotech Group</p>
+        <p class="p2">
+            <i class="far fa-envelope"></i> planotech@gmail.com |
+            <i class="fas fa-phone"></i> +91 9876543210
+        </p>
+    </footer>
+    <script src="https://kit.fontawesome.com/22e204274b.js" crossorigin="anonymous"></script>
+</body>
+</html>
