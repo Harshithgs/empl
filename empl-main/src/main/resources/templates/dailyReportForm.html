@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background color */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        textarea,
+        input[type="submit"],
+        input[type="reset"] {
+            width: 100%;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: black;
+            color: white;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 48%;
+            margin-right: 4%;
+            box-sizing: border-box;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: white;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+
+        .word-count {
+            margin-top: -10px;
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        header {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo img {
+            width: 300px;
+            height: 80px;
+        }
+
+        .navigation {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navigation button {
+            width: auto;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        .navigation h4 {
+            margin: 0;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            color: #2c3e50;
+        }
+
+        .spacer {
+            flex-grow: 1;
+        }
+
+        .navigation h4:hover {
+            color: #3498db;
+        }
+
+        footer {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        #icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        #icon a {
+            color: #2c3e50;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        #icon a:hover {
+            color: #3498db;
+        }
+
+
+        button {
+            width: 10%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const reportTextarea = document.getElementById('report');
+            const wordCount = document.getElementById('wordCount');
+
+            reportTextarea.addEventListener('input', function () {
+                const words = reportTextarea.value.trim().split(/\s+/).filter(Boolean).length;
+                wordCount.textContent = `${words} words`;
+            });
+
+            const form = document.getElementById('dailyReportForm');
+
+            form.addEventListener('submit', function (event) {
+                const words = reportTextarea.value.trim().split(/\s+/).filter(Boolean).length;
+
+                if (words > 250) {
+                    alert('Exceeded the word limit of 250 words. Please shorten your report.');
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www.planotechgroupofcompanies.com/wp-content/uploads/2023/11/Picture1-removebg-preview.png" alt="Logo">
+        </div>
+        <nav class="navigation">
+            <a href=""><button>Home</button></a>
+        </nav>
+    </header>
+
+    <h1>Daily Report Form</h1>
+    <form action="/employee/update" id="dailyReportForm"  method="post">
+        <label for="report">Daily Report (250 words limit):</label>
+        <textarea id="report" name="report" rows="8" maxlength="1000" required></textarea>
+        <div class="word-count" id="wordCount">0 words</div>
+
+        <button type="submit">Submit</button>
+       <button type="reset">Reset</button>
+    </form>
+
+    
+
+    <footer>
+        <div id="icon">
+            <h5>Follow Us:</h5>
+            <a href="https://www.facebook.com/planotechevents" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/planotechevents11/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/darshan-kumar-k/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://twitter.com/PlanotechEvents" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <p class="p11">© Copyright 2022 Planotech Group</p>
+        <p class="p1">Contact Information:</p>
+        <p class="p2">
+            <i class="fa-regular fa-envelope"></i>
+            planotech@gmail.com |
+            <i class="fa-solid fa-phone"></i>
+            +91 9876543210
+        </p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/22e204274b.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -35,7 +35,7 @@
         }
 
         .logo img {
-            width: 300px;
+            width: 150%;
             height: 80px;
         }
 
@@ -60,7 +60,7 @@
             margin: 0;
             cursor: pointer;
             transition: color 0.3s ease;
-            color: #2c3e50;
+            color: rgb(255, 255, 255);
         }
 
         .spacer {
@@ -192,7 +192,7 @@
         }
 
         #logoutBtn:hover {
-            background-color: #2980b9;
+            background-color: #4caf50;
         }
         a button {
     background-color: #4caf50;
@@ -221,7 +221,151 @@ a button:hover {
 #nav {
     margin-left: 60%;
 }
+html{
+
+          box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica', Arial, sans-serif;
+            background-color: #f4f4f4;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        header {
+            background-color: #ecf0f1;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .spacer {
+            flex-grow: 1;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto; /* Center the section */
+        }
+
+        h1 {
+            color: rgb(255, 255, 255);
+            font-size: 2em;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #3f454a;
+        }
+
+        footer {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #icon a {
+            color: #2c3e50;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        #icon a:hover {
+            color: #3498db;
+        }
     </style>
+   <script>
+         document.addEventListener("DOMContentLoaded", function () {
+             setTimeout(function () {
+                 var h2Elements = document.querySelectorAll('h2, h3');
+                 h2Elements.forEach(function (element) {
+                     element.style.display = 'none';
+                     getLocation()
+                 });
+             }, 1000);
+         });
+     
+     function getLocation() {
+         if (navigator.geolocation) {
+             navigator.geolocation.getCurrentPosition(showPosition, showError);
+         } else {
+             alert("Geolocation is not supported by this browser.");
+         }
+     }
+ 
+     function showPosition(position) {
+         alert("Latitude: " + position.coords.latitude +
+             "\nLongitude: " + position.coords.longitude);
+     }
+ 
+     function showError(error) {
+         switch (error.code) {
+             case error.PERMISSION_DENIED:
+                 alert("User denied the request for Geolocation.");
+                 break;
+             case error.POSITION_UNAVAILABLE:
+                 alert("Location information is unavailable.");
+                 break;
+             case error.TIMEOUT:
+                 alert("The request to get user location timed out.");
+                 break;
+             case error.UNKNOWN_ERROR:
+                 alert("An unknown error occurred.");
+                 break;
+         }
+     }
+ 
+     </script>
 </head>
 
 <body>
@@ -231,18 +375,18 @@ a button:hover {
                 alt="Logo">
         </div>
         <nav class="navigation" id="nav">
-            <h4><button>Profile</button></h4>
-            <h4><button id="logoutBtn">Logout</button></h4>
+            <a href="/profile"><button>Profile</button></a>
+            <a href="/login"><button>Logout</button></a>
         </nav>
     </header>
     <div class="container">
         <div class="header">
             <center>
-                <h1>Welcome developer</h1>
+                <h1>Welcome to IT Portal</h1>
             </center>
         </div>
         <div class="content">
-            <center> <h2>Welcome, Name</h2></center>
+            <center> <h2></h2></center>
             <h2>Number of leaves: 5</h1>
                 <h2>Today's score: 80</h1>
                     <p>As an employee make sure you <br> ➣Make Continuous Learning a Priority <br> ➣Enhance Effective
@@ -322,8 +466,8 @@ a button:hover {
                         setInterval(updateDateTime, 1000);
                     </script>
 
-                    <a href="#" class="button">Click here to submit today's report</a>
-        </div>
+  <a href="/report" class="button">Click here to submit today's report</a>
+</div>
     </div>
     <footer>
         <div id="icon">

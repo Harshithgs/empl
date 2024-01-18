@@ -3,10 +3,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.Planotech.Employeemangmentsystem.dto.EmployeeManage;
+import com.Planotech.Employeemangmentsystem.dto.ITDepartment;
 import com.Planotech.Employeemangmentsystem.service.EmployeeManageService;
 
 import jakarta.servlet.http.HttpSession;
@@ -29,5 +31,10 @@ public class EmployeeManageController {
 	@PostMapping("/login")
 	public String login(@RequestParam String emph, @RequestParam String password, ModelMap map, HttpSession session) {
 		return manageService.login(emph, password, map, session);
+	}
+	
+	@PostMapping("/update")
+	public String dilyReport(@RequestParam String report, ModelMap map, HttpSession session) {
+		return manageService.dailyReport(report, map, session);
 	}
 }

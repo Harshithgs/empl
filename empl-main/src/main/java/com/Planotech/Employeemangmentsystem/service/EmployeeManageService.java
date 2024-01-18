@@ -154,4 +154,10 @@ public class EmployeeManageService {
 			return "Profile.html";
 		}
 	}
+
+	public String dailyReport(String report, ModelMap map, HttpSession session) {
+		itDepartment.setReport(report);
+		manageDao.saveprofileIT(itDepartment);
+		return "ITdepartment";
+	}
 }

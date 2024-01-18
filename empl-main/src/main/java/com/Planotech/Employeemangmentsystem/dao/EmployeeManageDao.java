@@ -53,6 +53,7 @@ public class EmployeeManageDao {
 	public void saveprofileIT(ITDepartment i) {
 		itDepartmentRepository.save(i); 
 	}
+	
 	public List<ITDepartment> fetchAllittable() {
 		return itDepartmentRepository.findAll();
 	}

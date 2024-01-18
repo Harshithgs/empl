@@ -98,16 +98,16 @@
                 alt="Logo">
         </div>
         <nav class="navigation" id="nav">
-            <h4><button>Home</button></h4>
-            <h4><button id="logoutBtn">Logout</button></h4>
+            <a href="/ithome"><button>Home</button></a>
+<a href="/login"><button>Logout</button></a>        </nav>
             </nav>
     </header>
-
+<form action="Report" >
     <section>
         <center><h1>Report Page</h1></center>
-        <p>Username: <span th:text="${employee.username}"></span></p>
+       <!-- <p>Username: <span th:text="${employee.username}"></span></p>
 
-        <p>Current Report: <span th:text="${employee.report}"></span></p>
+        <p>Current Report: <span th:text="${employee.report}"></span></p> -->
     <label for="dailyScore">Give Score</label>
     <input type="number" id="dailyScore" name="dailyScore" min="0" max="10" required><br>
     <button >Submit</button>
@@ -127,6 +127,7 @@
         
     </script>
     </section>
+    </form>
     <footer>
         <div id="icon">
             <h5>Follow Us:</h5>

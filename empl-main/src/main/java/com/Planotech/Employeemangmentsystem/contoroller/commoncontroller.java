@@ -48,4 +48,18 @@ public class commoncontroller {
 			@RequestParam String address, @RequestParam String department, ModelMap map, HttpSession session) {
 		return employeeManageService.profile(username, email, phone, address, department, map, session);
 	}
+	
+	@GetMapping("/Report")
+	public String report() {
+		return "Report";
+	}
+	@GetMapping("/ithome")
+	public String ithome(){
+		return "ITdepartment";
+	}
+	
+	@GetMapping("/report")
+	public String dailyreport() {
+		return "dailyReportForm";
+	}
 }
